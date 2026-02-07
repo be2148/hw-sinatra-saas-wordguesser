@@ -40,7 +40,7 @@ messages in the <code>session[]</code> hash?</summary>
 Running the Sinatra app
 -----------------------
 
-As before, run the shell command `bundle exec rackup --port 3000` to start the app, or `bundle exec rerun -- rackup --port 3000 --host 0.0.0.0` if you want to rerun the app each time you make a code change.
+As before, run the shell command `bundle exec rackup --port 3000 -o 0.0.0.0` to start the app, or `bundle exec rerun -- rackup --port 3000 -o 0.0.0.0` if you want to rerun the app each time you make a code change.
 
 #### Self Check Question
 
@@ -69,7 +69,7 @@ But first, let's get our app onto Heroku.  This is actually a critical step.  We
 * Then type `git commit -m "Ready for Heroku!"` to commit all local changes.
 * Next, type `heroku login` and authenticate.
 * Since this is the first time we're telling Heroku about the Wordguesser app, we must type `heroku create` to have Heroku prepare to recieve this code and to have it create a git reference for referencing the new remote repository.
-* Then, type `git push heroku master` to push your code to Heroku.
+* Then, type `git push heroku main` to push your code to Heroku.
 * When you want to update Heroku later, you only need to commit your changes to git locally, then push to Heroku as in the last step.
 * Verify that the Heroku-deployed Wordguesser behaves the same as your development version before continuing. A few lines up from the bottom of the Heroku output in the terminal should have a URL ending in herokuapp.com. Find that, copy it to the clipboard, and paste it into a browser tab to see the current app.
 * Verify the broken functionality by clicking the new game button.

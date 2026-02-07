@@ -62,7 +62,7 @@ $ cucumber features/start_new_game.feature
 If you get an error about Cucumber like this one, just follow the advice and run `bundle install` first.
 
 ```sh
-~/workspace/hw-sinatra-saas-wordguesser (master) $ cucumber features/start_new_game.feature
+~/workspace/hw-sinatra-saas-wordguesser (main) $ cucumber features/start_new_game.feature
 Could not find proper version of cucumber (2.0.0) in any of the sources
 Run `bundle install` to install missing gems.
 ```
@@ -77,7 +77,7 @@ The create-new-game code in the Sinatra app should do the following:
 
 View how these steps are actualized in the app.rb file under the `post /create do` route.
 
-Now stage and commit all files locally, then `git push heroku master` to deploy to Heroku again and manually verify this improved behavior.
+Now stage and commit all files locally, then `git push heroku main` to deploy to Heroku again and manually verify this improved behavior.
 
 #### Self Check Question
 

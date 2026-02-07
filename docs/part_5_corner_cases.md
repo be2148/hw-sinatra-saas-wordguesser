@@ -41,7 +41,14 @@ my-app-12345.herokuapp.com
 
 You would of course change 'my-app-12345' to match your Heroku URL.
 
-Lastly, visit the same URL that you put into the text file with your web browser to be sure that your app is running correctly at that address before submitting the text file.
+Lastly, visit the same URL that you put into the text file with your web browser to be sure that your app is running 
+correctly at that address. 
+
+To "submit" your file, commit the `sinatra-url.txt` file to the top level directory of your repo. Push the repo to 
+GitHub, and submit the repo to Gradescope. Of course, leave the Heroku app running until grading is complete. Once the
+grade is set, you can disable the application on Heroku.  Consider not deleting the app on Heroku, so that if it needs
+to be running again for any reason (regrading, discussion with the CA, who knows...) you can just light it up again 
+rather than redeploying it.
 
 -----
 
