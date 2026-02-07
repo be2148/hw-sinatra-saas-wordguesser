@@ -251,7 +251,10 @@ In this case, we are prefixing with `bundle exec` again in order to ensure we ar
 and the `--` symbol is there to assert that the command we want `rerun` to operate with is `rackup -p 3000 -o 0.0.0.0`.  
 We could achieve the same effect with `bundle exec rerun "rackup -p 3000 -o 0.0.0.0"`. They are equivalent.
 More importantly, any detected changes will now cause the server to restart automatically, similar to the use 
-of `guard` to auto re-run specs when files change.
+of `guard` to auto re-run specs when files change. (**Note: we have had reports of Windows users that don't seem to have
+success with the `rerun` command reloading the application. If you experience this, please try using:
+`bundle exec rerun --force-polling 'bundle exec rackup -p 3000 -o 0.0.0.0'`, which will periodically restart the server 
+every few seconds to check for a filesystem change.)**
 
 Modify `app.rb` to print a different message, and verify that the change is detected by refreshing your browser 
 tab with the running app.  Also, before we move on, you should commit your latest changes to git.
