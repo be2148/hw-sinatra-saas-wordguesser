@@ -70,18 +70,18 @@ class WordGuesserApp < Sinatra::Base
   end
 
   get '/win' do
-    if @game.check_win_or_lose == :win
-      erb :win
-    else
+    if @game.word.empty? || @game.check_win_or_lose != :win
       redirect '/show'
+    else
+      erb :win
     end
   end
 
   get '/lose' do
-    if @game.check_win_or_lose == :lose
-      erb :lose
-    else
+    if @game.word.empty? || @game.check_win_or_lose != :lose
       redirect '/show'
+    else
+      erb :lose
     end
   end
 end
