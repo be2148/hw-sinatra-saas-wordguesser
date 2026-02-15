@@ -47,7 +47,7 @@ class WordGuesserApp < Sinatra::Base
         
       end
     rescue ArgumentError
-      flash[:message] = "Invalid guess. Expecting a letter, got: " + nput 
+      flash[:message] = "Invalid guess."
     end
 
     redirect '/show'
