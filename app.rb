@@ -59,13 +59,17 @@ class WordGuesserApp < Sinatra::Base
   # Notice that the show.erb template expects to use the instance variables
   # wrong_guesses and word_with_guesses from @game.
   get '/show' do
-    status = @game.check_win_or_lose
-    if status == :win
-      redirect '/win'
-    elsif status == :lose
-      redirect '/lose'
+    if @game.word.empty?
+      redirect '/new'
     else
-      erb :show
+      status = @game.check_win_or_lose
+      if status == :win
+        redirect '/win'
+      elsif status == :lose
+        redirect '/lose'
+      else
+        erb :show
+      end
     end
   end
 
